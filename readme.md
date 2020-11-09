@@ -51,7 +51,7 @@ analysing this to see your approach and to get an idea as to how long you spent 
 as best you can, and use your handover document to explain your prioritisation decisions and how you 
 would have continued if you'd had the chance.
 
-##Manifest
+## Manifest
 - `Controller\CoffeeBreakPreferenceController`
 - `Entity\CoffeeBreakPreference`
 - `Entity\StaffMember`
