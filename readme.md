@@ -1,4 +1,4 @@
-#Awin CoffeeBreak
+# Awin CoffeeBreak
 
 ## Outline
 The following classes are used in an application that is used to manage a Development Team’s 
@@ -9,8 +9,8 @@ morning coffee break.  The application can show everyone’s preferences in JSON
 HTML and is also able to send a notification to each member of the team on Slack so that 
 they know what they will be having that day.
 
-The rest of the office has got jealous and now wants to use the application in their teams.  
-Only the development team has Slack, so it is time to refactor the application so that it 
+The rest of the office has got jealous and now wants to use the application in their 
+teams.  Only the development team has Slack, so it is time to refactor the application so that it 
 can be handed over to other teams that will receive their notifications by email.
 
 ## Task
@@ -31,15 +31,15 @@ to write and test your code.  We have implemented Doctrine for the entities and 
 but you are welcome to create working code in any way that you see fit.
                                                                                                                           
 2. You will no doubt be adding more classes during the refactoring.  Any code you provide in 
-your answer will be considered as you intend it to go live, unless you specifically state otherwise.  
-It's ok to stub classes out, just as we've asked you to approach the new email notifications 
+your answer will be considered as you intend it to go live, unless you specifically state 
+otherwise.  It's ok to stub classes out, just as we've asked you to approach the new email notifications 
 functionality, but you must reference this in your handover document.
  
 3. Please provide clear instructions for setting up your solution if you intend it to be runnable.
 
 4. This exercise is the proverbial 'piece of string', in that it's very difficult to set boundaries 
-to it.  We are not expecting a finished product, and you will almost certainly include some loose ends.  
-This is fine, just ensure you refer to these in the handover document with an explanation of how 
+to it.  We are not expecting a finished product, and you will almost certainly include some loose 
+ends.  This is fine, just ensure you refer to these in the handover document with an explanation of how 
 you would see this completed.
 
 5. A git repository is included so that you can show the changes and additions you make.  We will be 
