@@ -9,7 +9,7 @@ class EmailNotifierTest extends TestCase
     public function testStatusOfNotificationIsTrue()
     {
         $staff = new StaffMember();
-        $staff->setSlackIdentifier("ABC123");
+        $staff->setEmail("angus.desouza@gmail.com");
         $preference = new CoffeeBreakPreference("drink", "coffee", $staff);
 
         $notificationService = new \Awin\Tools\CoffeeBreak\Services\SlackNotifier();
@@ -21,9 +21,10 @@ class EmailNotifierTest extends TestCase
     {
         $staff = new StaffMember();
         $preference = new CoffeeBreakPreference("drink", "tea", $staff);
-        $notificationService = new \Awin\Tools\CoffeeBreak\Services\SlackNotifier();
+//        $notificationService = new \Awin\Tools\CoffeeBreak\Services\SlackNotifier();
+        $notificationService = new \Awin\Tools\CoffeeBreak\Services\EmailNotifier();
 
         $this->expectException(\RuntimeException::class);
-        $status = $notificationService->notifyStaffMember($staff, $preference);
+        $status = $notificationService->emailStaffMember($staff, $preference);
     }
 }

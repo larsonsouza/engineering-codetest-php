@@ -3,6 +3,7 @@ namespace Awin\Tools\CoffeeBreak\Controller;
 
 use Awin\Tools\CoffeeBreak\Repository\CoffeeBreakPreferenceRepository;
 use Awin\Tools\CoffeeBreak\Repository\StaffMemberRepository;
+use Awin\Tools\CoffeeBreak\Services\EmailNotifier;
 use Awin\Tools\CoffeeBreak\Services\SlackNotifier;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -53,10 +54,13 @@ class CoffeeBreakPreferenceController
         $repository = new CoffeeBreakPreferenceRepository();
         $p = $repository->getPreferenceFor($staffMemberId, new \DateTime());
 
-        $notifier = new SlackNotifier();
-        $notificationSent = $notifier->notifyStaffMember($staffMember, $p);
+//        $notifier = new SlackNotifier();
+//        $notificationSent = $notifier->notifyStaffMember($staffMember, $p);
 
-        return new Response($notificationSent ? "OK" : "NOT OK", 200);
+        $emailNotifier = new EmailNotifier();
+        $emailNotification = $emailNotifier->emailStaffMember($staffMember, $p);
+
+        return new Response($emailNotification ? "OK" : "NOT OK", 200);
     }
 
     private function getJsonForResponse(array $preferences)

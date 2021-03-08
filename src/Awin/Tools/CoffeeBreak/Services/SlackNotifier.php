@@ -24,6 +24,9 @@ class SlackNotifier
             throw new RuntimeException("Cannot send notification - no SlackIdentifier");
         }
 
+
+
+
         return true;
     }
 }
